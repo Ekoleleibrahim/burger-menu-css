@@ -1,0 +1,59 @@
+/* Réinitialisation de marge et padding */
+
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 50px 20px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+/* Cacher le checkbox */
+ input{
+    display: none;
+ }
+
+ /* Contenu de mon Menu */
+ .ctn-menu{
+    border-radius: 10px;
+    box-shadow: 0 0 1px black;
+ }
+
+ label{
+    display: block;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+ }
+
+ label div{
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    transition: transform 300ms linear;
+}
+
+/* Lorsqu'on click sur le menu, les barres du menu change de forme */
+.ctn-menu:has(:checked) label div:nth-child(1){
+    transition: transform 300ms linear;
+    transform: translateY(13px) translateX(1px) rotate(60deg);
+}
+.ctn-menu:has(:checked) label div:nth-child(2){
+    transform: scaleX(0);
+}
+.ctn-menu:has(:checked) label div:nth-child(3){
+    transition: transform 300ms linear;
+    transform: translateY(-10px) translateX(1px) rotate(-60deg);
+}
+
+
+
+
+
