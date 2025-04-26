@@ -21,7 +21,7 @@ body{
  /* Contenu de mon Menu */
  .ctn-menu{
     border-radius: 10px;
-    box-shadow: 0 0 1px black;
+    border: 1px solid black;
  }
 
  label{
